@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> For My Elsia </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #728fce, #6495ed);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 420px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 8px;
+    }
+
+    .press-btn {
+      background-color: #151b54;
+      color: white;
+    }
+
+    .yes-btn {
+      background-color: #000080;
+      color: white;
+    }
+
+    .no-btn {
+      background-color: #281e5d;
+      color: white;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .message-box {
+      max-height: 220px;
+      overflow-y: auto;
+      padding: 15px;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    .final-message {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 id="heading">to my baby Elsia</h1>
+
+    <button id="pressBtn" class="press-btn">Press</button>
+
+    <div id="messageSection" class="hidden">
+
+      <div class="message-box">
+        <p>
+          Babyy hiiii </p>
+          <p>
+I may not always say this often, but I hope you know how much you mean to me. Your existence alone makes my days lighter, my thoughts calmer, the dark voices in my head quieter, and my heart feel at home. There’s really something about you that makes everything feel easy even on our tough days. 
+        </p>
+
+        <p>
+          I really appreciate you, baby. Not just for the big things but for the small ones too. The way you care, laugh, and being you. You don’t even have to try and you still manage to make my life better. I’m really grateful for every conversation, calls, kulitan, asaran, little cute arguments, and lambingan that we’ve shared. 
+        </p>
+
+        <p>
+          Being with you feels natural. Comforting. Safe. You make me want yo be better and at the same time you make me feel accepted as exactly as I am. 
+        </p>
+
+        <p>
+          This might be obvious, but I still wanted to ask you properly. </p>
+‎
+<p> Valentine’s Day is coming up, and you’re the only person I want to celebrate it with. Although we can’t go on dates like other people do, I still want to spend that special day with you.
+        </p>
+        <p> Bebi, will you be my Valentine?
+‎
+‎Dapat oo kase wala ka namang choice. Eme. I’ll respect whatever decision you make. I love you so muchh, my bebiii </p>
+      </div>
+
+      <p><strong>Will you be my Valentine?</strong></p>
+
+      <button id="yesBtn" class="yes-btn">Yes yes yes</button>
+      <button id="noBtn" class="no-btn">No :(</button>
+    </div>
+
+    <div id="finalMessage" class="hidden">
+      <p class="final-message">yan ganyan dapat</p>
+      <p>I love you so muchhh, baby koo. sakin ka lang forever ha</p>
+    </div>
+
+  </div>
+
+  <script>
+    const pressBtn = document.getElementById("pressBtn");
+    const messageSection = document.getElementById("messageSection");
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+    const finalMessage = document.getElementById("finalMessage");
+
+    let yesSize = 16;
+
+    pressBtn.addEventListener("click", () => {
+      pressBtn.style.display = "none";
+      messageSection.classList.remove("hidden");
+    });
+
+    noBtn.addEventListener("click", () => {
+      yesSize += 6;
+      yesBtn.style.fontSize = yesSize + "px";
+    });
+
+    yesBtn.addEventListener("click", () => {
+      messageSection.classList.add("hidden");
+      finalMessage.classList.remove("hidden");
+    });
+  </script>
+
+</body>
+</html>
